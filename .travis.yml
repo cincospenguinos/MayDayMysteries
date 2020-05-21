@@ -1,8 +1,8 @@
 language: ruby
+cache: bundler
 rvm:
   - 2.5.3
-node_js:
-  - node
+node_js: '10.15.3'
 before_install:
   - yes | gem update --system --force
   - gem install bundler
