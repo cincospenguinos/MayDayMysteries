@@ -1,5 +1,8 @@
 # May Day Mystery website
 
+[![Build Status](https://travis-ci.org/cincospenguinos/MayDayMysteries.svg?branch=master)](https://travis-ci.org/cincospenguinos/MayDayMysteries)
+[![Coverage Status](https://coveralls.io/repos/github/cincospenguinos/MayDayMysteries/badge.svg?branch=master)](https://coveralls.io/github/cincospenguinos/MayDayMysteries?branch=master)
+
 - [ ] Holds documents
 - [ ] Users can sign up
 - [ ] Users can select sections
