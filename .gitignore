@@ -12,3 +12,5 @@ yarn-debug.log*
 *.sqlite3
 tmp/
 log/
+coverage/
+db/test.sqlite3**
