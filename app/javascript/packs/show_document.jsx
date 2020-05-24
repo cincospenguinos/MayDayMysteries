@@ -4,14 +4,20 @@ import PropTypes from 'prop-types'
 import Document from "./document/document";
 
 function ShowDocument(props) {
-  return (<div>
-    <Document imageSource={props.info.name} />
-  </div>)
+  return (
+    <div>
+      <Document
+        imageSource={props.info.name}
+        datePublished={props.info.published}
+      />
+    </div>
+  );
 }
 
 ShowDocument.propTypes = {
   info: PropTypes.shape({
     name: PropTypes.string,
+    published: PropTypes.string,
   }).isRequired,
 };
 
