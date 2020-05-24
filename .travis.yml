@@ -3,18 +3,21 @@ cache:
   bundler: true
   yarn: true
   directories:
-    - node_modules
+  - node_modules
 rvm:
-  - 2.5.3
+- 2.5.3
 before_install:
-  - yes | gem update --system --force
-  - gem install bundler
+- yes | gem update --system --force
+- gem install bundler
 install:
-  - bundle install
-  - nvm install node
-  - node -v
-  - npm i -g yarn
-  - yarn install
-  - RAILS_ENV=test bundle exec rails webpacker:compile
+- bundle install
+- nvm install node
+- node -v
+- npm i -g yarn
+- yarn install
+- RAILS_ENV=test bundle exec rails webpacker:compile
 before_script:
-  - bundle exec rake db:create db:test:prepare
+- bundle exec rake db:create db:test:prepare
+deploy:
+  api_key:
+    secure: cl8mFQJNiQ7lwcGSCbRB/PfCH0H/gK5dp+7ngGFZdUrJbAhSZdz/vZMm7dQkakZ55RgLsACjxakwx//0FICckit0GdijJpg/yqggBEUky7MeCaWyY27oYcG8aHPlULCbmrzYS5h6cMGxlnbmcmQu8cptrHgibfSmTzg/Z8iBDow3oYl2fKl4GxGt9Bc7C4I/AGTRlfF/JOfT4RGCiakEp3pak0iyH4zkTfm5w8M94SFbmKfGl0msVIS/vDNlVHe2Mo5h/hMNok6HUInf0X8hSaYXSaHLGf6hWHIKFn2wms3V9wWybbteEkZmClscUbMJWxCIQbX3ihGVWuw2zgE260GTbMYBB6tv5/UppfdXXyFaGa6IyQLbxYuRpHVH3pv5K3wRvDRK37vSeLVOQ7D/AE7u7m8y45m/IRKb8p8RpljZ5Y4wH0XvLF7YdYXuP0HL9YNT9tl6LgioEmqLXy6LEKVI851Jr1fbAOwFoC3mU/I2yfhNCZLxbsI8owdhA429rmoEq81ed6I5RIWx0Ysrgm2r1EoVd8W7CBDNvMXV04arLO3az6GPWZ/MWbGla0o4oIGoyyMvTWXn109AgOfM7XztIxCpApJsy6L5XFF9opl2Ba0w1mRnhxb7bWSqQUwdkacOoWQyHdF3m49L5LyoMZ5NR8aCY4d1dv/srJPcUyE=
