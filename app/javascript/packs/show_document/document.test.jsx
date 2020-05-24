@@ -3,7 +3,7 @@ import { render, cleanup } from '@testing-library/react';
 import moment from 'moment';
 import Document from "./document";
 
-describe('app/javascript/packs/document/document', () => {
+describe('app/javascript/packs/show_document/document', () => {
   const renderComponent = (props = {}) => render(<Document {...props} />);
 
   afterEach(cleanup);
