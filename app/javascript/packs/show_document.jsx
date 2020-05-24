@@ -1,23 +1,27 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
+import Document from "./document/document";
 
-const ShowDocument = props => (
-  <div>A document should appear here!</div>
-);
-
-ShowDocument.defaultProps = {
-  name: 'David'
-};
+function ShowDocument(props) {
+  return (<div>
+    <Document imageSource={props.info.name} />
+  </div>)
+}
 
 ShowDocument.propTypes = {
-  name: PropTypes.string
+  info: PropTypes.shape({
+    name: PropTypes.string,
+  }).isRequired,
 };
 
-document.addEventListener('DOMContentLoaded', (props) => {
-  // TODO: props is { name, published }. May need to extract it from JSON or something
+ShowDocument.defaultProps = {};
+
+document.addEventListener('DOMContentLoaded', () => {
+  const documentInfo = JSON.parse(document.getElementById('document-info').getAttribute('data-document-data'));
+
   ReactDOM.render(
-    <ShowDocument />,
+    <ShowDocument info={documentInfo} />,
     document.body.appendChild(document.createElement('div')),
   );
 })
