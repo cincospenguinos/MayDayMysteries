@@ -20,7 +20,7 @@ before_script:
 - bundle exec rake db:create db:test:prepare
 script:
   - yarn test
-  - bundle exec
+  - bundle exec rake test
 deploy:
   provider: heroku
   api_key:
