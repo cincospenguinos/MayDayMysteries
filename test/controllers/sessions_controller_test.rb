@@ -9,10 +9,9 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'logging in takes you to the documents page' do
-    skip 'Documents list must be completed first'
     valid_user = users(:one)
-    post '/login', { username: valid_user.username, password: valid_user.password }
-    assert_redirected_to 'foo'
+    post '/login', params: { username: valid_user.username, password: 'password' }
+    assert_redirected_to '/documents'
   end
 
   test 'logging in sets a session' do
