@@ -20,8 +20,8 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test '#create redirects to documents list' do
-    skip 'Documents list needs to be implemented first'
     post users_url, params: valid_params
+    assert_redirected_to documents_url
   end
 
   test '#create does not create a new user' do

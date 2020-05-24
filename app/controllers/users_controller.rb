@@ -10,6 +10,7 @@ class UsersController < ApplicationController
 
     if @user.save
       login(@user)
+      redirect_to documents_url
     else
       render 'new'
     end
