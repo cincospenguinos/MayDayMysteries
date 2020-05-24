@@ -19,8 +19,10 @@ install:
 before_script:
 - bundle exec rake db:create db:test:prepare
 script:
-  - yarn test
-  - bundle exec rake test
+- yarn test --coverage
+- bundle exec rake test
+after_script:
+- yarn run coveralls
 deploy:
   provider: heroku
   api_key:
