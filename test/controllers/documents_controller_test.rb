@@ -10,4 +10,9 @@ class DocumentsControllerTest < ActionDispatch::IntegrationTest
     get document_url(12)
     assert_response :not_found
   end
+
+  test '#index responds okay' do
+    get documents_url
+    assert_response :success
+  end
 end

@@ -2,8 +2,13 @@
 
 class DocumentsController < ApplicationController
   def show
+    puts ">>> #{document_params[:id]}"
     @document = Document.find_by_id(document_params[:id])
     render file: "#{Rails.root}/public/404.html", status: :not_found if @document.nil?
+  end
+
+  def index
+    @documents = Document.all
   end
 
   private
