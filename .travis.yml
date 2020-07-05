@@ -22,6 +22,7 @@ deploy:
   provider: heroku
   api_key:
     secure: "gBA3/swvXyXUwl0aSkKXNwgnYDybRiwzp4uKd4sQ6n+0/jdJvV6MePan7lpfAF1k7SBQ0A/zjcx8NZx0PzDqeo8a/u1xt+lpcWvte6P/+IhAuSJQ6Vk6VEYchw1hp/CpPE64cTTYWLPVy9j5sETuiZXHEZReXW5JBG9MYZcySOqUpn5orDky6wQS69FqCWBftCpvAvkh+1pAGSPK1hEuy4/XCu7BVCctXfFSz0p/B2e7J0SYqmsc+5ylC9SO4H87mVF7A2FTPMQKomKOR6G3h5xCtFVPSfSD2+gsIvN/zPIAoeWf8VTXQvXrLbf7Ba7Mt90WiC1MnmVGnNtGu7ZPs3YBOduzcxVDLiT9LN66B6O2uyM4QU35zPoi2wd76L7xN1xt92cD9tqBhYCatPkBqw97nwaGTqhWIiFOl8XG+IZq8CEsSdnHneoGbnY7G6sf8NEfySbTINPrxt6qaNcQc8xEsv0OB0q8lNeFaE/Sd/+CghBmAm91ZsFSz8LOij1SDFEI840aeIJoPqDqTskSrc73HAyAwq79kr5ArZh1OcKJhg6UgIBI07J9j5riasuo0SC3Z8AHf5czHRPRMyqNNkXa02xbsknSsgxD5skR0uMbG47OYsBpb/+8aJkUAwcFR4+DY4LiMVVlojexX3PpMq/xDg1SmI+qXHmFJZRGzQM="
+  app: may-day-mysteries
   run:
   - rake db:migrate
   - rake db:seed
