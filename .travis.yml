@@ -18,6 +18,9 @@ install:
 - RAILS_ENV=test bundle exec rails webpacker:compile
 before_script:
 - bundle exec rake db:create db:test:prepare
+script:
+- yarn test --coverage
+- bundle exec rake test
 deploy:
   provider: heroku
   api_key:

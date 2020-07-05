@@ -6,8 +6,9 @@ class SessionsController < ApplicationController
   def create
     @user = User.where(username: params[:username]).first
 
-    if @user && @user.authenticate(params[:password])
+    if @user&.authenticate(params[:password])
       login(@user)
+      redirect_to documents_url
     else
       redirect_to '/login'
     end

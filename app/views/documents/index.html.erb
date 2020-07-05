@@ -1,0 +1,6 @@
+<h1>All Documents</h1>
+<ul>
+  <% @documents.each do |document| %>
+    <li><%= link_to document.published, document_url(document.id) %></li>
+  <% end %>
+</ul>
